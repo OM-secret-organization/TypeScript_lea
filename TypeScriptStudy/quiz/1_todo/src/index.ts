@@ -31,7 +31,7 @@ function completeTodo(index: number, todo: object) : void{
 }
 
 // business logic
-function logFirstTodo() {
+function logFirstTodo(): object {
   return todoItems[0];
 }
 
