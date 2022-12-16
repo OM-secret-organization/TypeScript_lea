@@ -9,6 +9,7 @@ let lea: User = {
   name: '레아'
 }
 
+// 함수에 인터페이스 활용
 function getUser(user: User) {
   console.log(user);
 }
@@ -19,3 +20,17 @@ const LEA = {
   age: 100
 }
 getUser(LEA);
+
+
+// 함수의 스펙(구조)에 인터페이스를 활용
+
+
+interface sumFunction {
+  (a: number, b: number): number
+}
+
+let sum: sumFunction;
+sum = function (a: number, b: number): number {
+  return a + b
+}
+
