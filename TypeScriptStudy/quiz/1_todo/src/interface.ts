@@ -34,3 +34,12 @@ sum = function (a: number, b: number): number {
   return a + b
 }
 
+// 인덱싱
+
+interface StringArray {
+  [index: number]: string
+}
+
+let arr: StringArray = ['a', 'b', 'c']
+arr[0]; // 'a'
+arr[1] = 10; //err
