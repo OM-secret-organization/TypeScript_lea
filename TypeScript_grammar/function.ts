@@ -15,3 +15,10 @@ function add(): number {
 function sum2(a: number, b: number): number {
   return a + b;
 }
+
+// 인자 값을 추가하면 에러가 뜬다.
+function sum3(a: number, b: number): number {
+  return a + b;
+}
+
+sum(10, 20, 30);
