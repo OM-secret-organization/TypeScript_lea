@@ -22,3 +22,10 @@ function sum3(a: number, b: number): number {
 }
 
 sum(10, 20, 30);
+
+// 함수의 옵셔널 파라미터
+
+function log(a: string, b?: string, c?: string) {}
+
+log("hello");
+log("hello ts", "lea");
