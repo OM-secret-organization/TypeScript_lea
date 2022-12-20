@@ -6,41 +6,38 @@ interface User {
 // 변수에 인터페이스 활용
 let lea: User = {
   age: 13,
-  name: '레아'
-}
+  name: "레아",
+};
 
 // 함수에 인터페이스 활용
 function getUser(user: User) {
   console.log(user);
 }
 
-
 const LEA = {
-  name: 'lea',
-  age: 100
-}
+  name: "lea",
+  age: 100,
+};
 getUser(LEA);
-
 
 // 함수의 스펙(구조)에 인터페이스를 활용
 
-
 interface sumFunction {
-  (a: number, b: number): number
+  (a: number, b: number): number;
 }
 
 let sum: sumFunction;
 sum = function (a: number, b: number): number {
-  return a + b
-}
+  return a + b;
+};
 
 // 인덱싱
 
 interface StringArray {
-  [index: number]: string
+  [index: number]: string;
 }
 
-let arr: StringArray = ['a', 'b', 'c']
+let arr: StringArray = ["a", "b", "c"];
 arr[0]; // 'a'
 arr[1] = 10; //err
 
@@ -54,12 +51,9 @@ let obj: StringRegexDictionary = {
   jsRile: /\.js$/,
 };
 
-obj['cssFile'] = 'a';
+obj["cssFile"] = "a";
 
-Object.keys(obj).forEeach(function(value) {
-
-})
-
+Object.keys(obj).forEeach(function (value) {});
 
 // 인터페이스 확장
 
@@ -70,10 +64,10 @@ interface Person {
 
 interface Developer extends Person {
   laguage: string;
-};
+}
 
 let loveLea: Developer = {
-  laguage: 'hi',
+  laguage: "hi",
   age: 100,
-  name: 'lea',
+  name: "lea",
 };
