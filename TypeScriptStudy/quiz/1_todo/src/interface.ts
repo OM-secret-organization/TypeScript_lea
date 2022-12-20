@@ -43,3 +43,19 @@ interface StringArray {
 let arr: StringArray = ['a', 'b', 'c']
 arr[0]; // 'a'
 arr[1] = 10; //err
+
+interface StringRegexDictionary {
+  [key: string]: RegExp;
+}
+
+let obj: StringRegexDictionary = {
+  // sth: /abc/,
+  cssFile: /\.css$/,
+  jsRile: /\.js$/,
+};
+
+obj['cssFile'] = 'a';
+
+Object.keys(obj).forEeach(function(value) {
+
+})
