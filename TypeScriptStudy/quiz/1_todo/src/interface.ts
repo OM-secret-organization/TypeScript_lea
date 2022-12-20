@@ -59,3 +59,21 @@ obj['cssFile'] = 'a';
 Object.keys(obj).forEeach(function(value) {
 
 })
+
+
+// 인터페이스 확장
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+interface Developer extends Person {
+  laguage: string;
+};
+
+let loveLea: Developer = {
+  laguage: 'hi',
+  age: 100,
+  name: 'lea',
+};
