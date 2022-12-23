@@ -53,7 +53,7 @@ let obj: StringRegexDictionary = {
 
 obj["cssFile"] = "a";
 
-Object.keys(obj).forEeach(function (value) {});
+Object.keys(obj).forEach(function (value) {});
 
 // 인터페이스 확장
 
@@ -67,7 +67,9 @@ interface Developer extends Person {
 }
 
 let loveLea: Developer = {
-  laguage: "hi",
-  age: 100,
   name: "lea",
+  age: 100,
+  laguage: "hi",
 };
+
+// type은 확장이 되지 않는다. 가능한 type 보다는 interface를 사용하는게 좋다.
