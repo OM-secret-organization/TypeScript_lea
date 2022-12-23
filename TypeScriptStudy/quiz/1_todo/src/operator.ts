@@ -24,3 +24,19 @@ function leaMessage(value: string | number) {
 
   throw new TrypeError("value must be string or number");
 }
+
+interface Developer {
+  name: string;
+  skill: string;
+}
+
+interface Person {
+  name: string;
+  age: number;
+}
+
+function askSomeone(someone: Developer | Person): void {
+  someone.name;
+  someone.age;
+  someone.skill;
+}
