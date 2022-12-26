@@ -48,3 +48,6 @@ askSomeone({ name: 'hi', age: 30, skill: 'hi' });
 let capt2: string & number & boolean;
 
 // 실무에서는 인터섹션보다는 유니온이 더 많이 사용됨
+
+askSomeone({ name: '디벨로퍼', skill: '웹개발' });
+askSomeone({ name: '레아', age: 30 });
