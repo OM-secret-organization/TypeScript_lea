@@ -13,3 +13,11 @@ enum Shoes {
 // 별도의 값을 지정하지 않으면 숫자형 이넘으로 취급
 let myShoes = Shoes.Nike;
 console.log(myShoes); //0
+
+enum Shoes2 {
+  Nike = 'nike',
+  Adidas = 'adidas',
+}
+
+let myShoes2 = Shoes2.Nike;
+console.log(myShoes2);
