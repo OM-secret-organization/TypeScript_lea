@@ -11,3 +11,8 @@ class Person {
 
 let Lea = new Person('레아', 31);
 console.log(lea);
+
+function Person2(name, age) {
+  this.name = name;
+  this.age = age;
+}
