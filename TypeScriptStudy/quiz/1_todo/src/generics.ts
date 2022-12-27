@@ -47,3 +47,15 @@ logText4(10);
 const a = logText4('a'); // string | number
 
 a.split(''); // number가 들어올 경우에는 split 을 사용할 수 없음
+
+//제네릭을 이용한 타입 선언
+
+function logText5<T>(text: T): T {
+  console.log(text);
+  return text;
+}
+
+// 호출할 때(호출하는 시점) 타입을 정의
+const loveLea = logText5<string>('lovelea');
+loveLea.split(''); //문자열이기 때문에 사용 가능
+const login = logText5<boolean>(true);
