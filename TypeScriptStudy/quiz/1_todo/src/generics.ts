@@ -34,3 +34,16 @@ function logNumber(num: number) {
   return num;
 }
 const num = logNumber(10);
+
+// 제네릭을 사용하지 않을 경우의 단점
+function logText4(text: string | number) {
+  console.log(text);
+  return text;
+}
+
+logText4('a');
+logText4(10);
+
+const a = logText4('a'); // string | number
+
+a.split(''); // number가 들어올 경우에는 split 을 사용할 수 없음
