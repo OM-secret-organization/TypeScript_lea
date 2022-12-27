@@ -20,4 +20,22 @@ enum Shoes2 {
 }
 
 let myShoes2 = Shoes2.Nike;
-console.log(myShoes2);
+console.log(myShoes2); //나이키
+
+// 예제
+enum Answer {
+  Yes = 'Y',
+  No = 'N',
+}
+
+function askQuestion(answer: Answer) {
+  if (answer === Answer.Yes) {
+    console.log('정답');
+  }
+  if (answer === Answer.No) {
+    console.log('오답');
+  }
+}
+
+askQuestion(Answer.Yes);
+askQuestion('Yes');
