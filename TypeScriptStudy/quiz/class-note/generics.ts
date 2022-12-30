@@ -74,3 +74,15 @@ interface Dropdown2<T> {
 const obj: Dropdown = { value: '10', selected: false };
 const obj2: Dropdown2<string> = { value: '10', selected: false };
 const obj3: Dropdown2<number> = { value: 10, selected: false };
+
+// 타입 제한, 최대한 명시적으로 작성하는 것이 가독성을 높인다.
+
+function logTextLength<T>(text: T[]): T[] {
+  console.log(text.length);
+  text.forEach(function (text) {
+    console.log(text);
+  });
+  return text;
+}
+
+logTextLength<string>(['hi', 'abc']);
