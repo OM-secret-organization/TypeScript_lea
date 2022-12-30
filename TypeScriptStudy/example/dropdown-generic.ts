@@ -23,9 +23,7 @@ const numberOfProducts: ProductNumber[] = [
 
 function createDropdownItem(
   // 유니온타입
-  item:
-    | { value: number; selected: boolean }
-    | { value: string; selected: boolean }
+  item: Email | ProductNumber
 ) {
   const option = document.createElement('option');
   option.value = item.value.toString();
@@ -39,4 +37,8 @@ emails.forEach(function (email) {
   const item = createDropdownItem(email);
   const selectTag = document.querySelector('#email-dropdown');
   selectTag.appendChild(item);
+});
+
+numberOfProducts.forEach(function (product) {
+  const item = createDropdownItem(product);
 });
