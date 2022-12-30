@@ -1,16 +1,32 @@
-const emails = [
+interface Email {
+  value: string;
+  selected: boolean;
+}
+
+// object[]의 경우 구체적으로 적어주면 좋다.
+const emails: Email[] = [
   { value: 'naver.com', selected: true },
   { value: 'gmail.com', selected: false },
   { value: 'hanmail.net', selected: false },
 ];
 
-const numberOfProducts = [
+interface ProductNumber {
+  value: number;
+  selected: boolean;
+}
+
+const numberOfProducts: ProductNumber[] = [
   { value: 1, selected: true },
   { value: 2, selected: false },
   { value: 3, selected: false },
 ];
 
-function createDropdownItem(item) {
+function createDropdownItem(
+  // 유니온타입
+  item:
+    | { value: number; selected: boolean }
+    | { value: string; selected: boolean }
+) {
   const option = document.createElement('option');
   option.value = item.value.toString();
   option.innerText = item.value.toString();
