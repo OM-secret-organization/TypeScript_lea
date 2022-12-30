@@ -100,3 +100,16 @@ function logTextLength2<T extends LengthType>(text: T): T {
 
 logTextLength2(10);
 logTextLength2({ legnth: 10 });
+
+//타입 제한 keyof
+
+interface Shoppingitem {
+  name: string;
+  price: number;
+  stock: number;
+}
+function getShoppingItemOption<T extends keyof Shoppingitem>(itemOption: T): T {
+  return itemOption;
+}
+
+getShoppingItemOption('name');
