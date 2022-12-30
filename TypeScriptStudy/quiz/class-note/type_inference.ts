@@ -15,4 +15,22 @@ interface Dropdown<T> {
 }
 
 let shoppingItem: Dropdown<string> = { value: 'lea', title: 'hi' };
-let shoppingItem: Dropdown<number> = { value: 3, title: 'hi' };
+let shoppingItem2: Dropdown<number> = { value: 3, title: 'hi' };
+
+// 타입 추론 3
+
+interface Dropdown2<T> {
+  value: T;
+  title: string;
+}
+interface DetailedDropdown<K> extends Dropdown2<K> {
+  description: string;
+  tag: K;
+}
+
+let detailedItem: DetailedDropdown<string> = {
+  title: 'abe',
+  description: 'lea',
+  value: 'hihi',
+  tag: 'hello',
+};
