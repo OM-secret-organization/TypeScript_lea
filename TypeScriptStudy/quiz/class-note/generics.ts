@@ -59,3 +59,18 @@ function logText5<T>(text: T): T {
 const loveLea = logText5<string>('lovelea');
 loveLea.split(''); //문자열이기 때문에 사용 가능
 const login = logText5<boolean>(true);
+
+//인터페이스에 제네릭을 선언하는 방법
+interface Dropdown {
+  value: string;
+  selected: boolean;
+}
+
+interface Dropdown2<T> {
+  value: T;
+  selected: boolean;
+}
+
+const obj: Dropdown = { value: '10', selected: false };
+const obj2: Dropdown2<string> = { value: '10', selected: false };
+const obj3: Dropdown2<number> = { value: 10, selected: false };
