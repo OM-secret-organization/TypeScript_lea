@@ -86,3 +86,17 @@ function logTextLength<T>(text: T[]): T[] {
 }
 
 logTextLength<string>(['hi', 'abc']);
+
+// 정의된 타입 이용하기
+
+interface LengthType {
+  length: number;
+}
+
+function logTextLength2<T extends LengthType>(text: T): T {
+  text.length;
+  return text;
+}
+
+logTextLength2(10);
+logTextLength2({ legnth: 10 });
