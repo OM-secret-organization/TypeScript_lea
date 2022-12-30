@@ -57,13 +57,15 @@ function fetchContacts(): Promise<Contact[]> {
 // main
 class AddressBook {
   // TODO: 아래 변수의 타입을 지정해보세요.
-  contacts = [];
+  contacts: Contact[] = [];
 
+  // constructor는 타입 지정 X
   constructor() {
     this.fetchData();
   }
 
-  fetchData() {
+  //메소드
+  fetchData(): void {
     fetchContacts().then((response) => {
       this.contacts = response;
     });
