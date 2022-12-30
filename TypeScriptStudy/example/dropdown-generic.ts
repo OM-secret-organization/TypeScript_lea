@@ -1,21 +1,26 @@
-interface Email {
-  value: string;
+interface DropdownItem<T> {
+  value: T;
   selected: boolean;
 }
 
+// interface Email {
+//   value: string;
+//   selected: boolean;
+// }
+
 // object[]의 경우 구체적으로 적어주면 좋다.
-const emails: Email[] = [
+const emails: DropdownItem<string>[] = [
   { value: 'naver.com', selected: true },
   { value: 'gmail.com', selected: false },
   { value: 'hanmail.net', selected: false },
 ];
 
-interface ProductNumber {
-  value: number;
-  selected: boolean;
-}
+// interface ProductNumber {
+//   value: number;
+//   selected: boolean;
+// }
 
-const numberOfProducts: ProductNumber[] = [
+const numberOfProducts: DropdownItem<number>[] = [
   { value: 1, selected: true },
   { value: 2, selected: false },
   { value: 3, selected: false },
@@ -23,7 +28,7 @@ const numberOfProducts: ProductNumber[] = [
 
 function createDropdownItem(
   // 유니온타입
-  item: Email | ProductNumber
+  item: DropdownItem<string> | DropdownItem<number>
 ) {
   const option = document.createElement('option');
   option.value = item.value.toString();
