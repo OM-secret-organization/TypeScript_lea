@@ -11,8 +11,13 @@ export function priceOfApple() {
   return 10000;
 }
 
-//순수함수
-function getPrice(name: string) {
+/**
+ * 순수함수
+ * 입력타입 : string
+ * 출력타입 : number | undefined
+ */
+
+function getPrice(name: string): number | undefined {
   if (name === 'tomato') {
     return 7000;
   } else if (name === 'orange') {
@@ -21,6 +26,19 @@ function getPrice(name: string) {
     return 10000;
   }
 }
+
+export const isExpensive = (price: number | undefined) => {
+  if (price === undefined) {
+    return false;
+  }
+  return price > 10000;
+};
+
+export const main = () => {
+  // const price = getPrice('tomato');
+  // return isExpensive(price);
+  return isExpensive(getPrice('tomato'));
+};
 
 //입력값이 적을 땐 객체로 사용
 const priceOfFruit = {
