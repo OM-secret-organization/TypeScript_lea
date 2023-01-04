@@ -1,3 +1,4 @@
+//전역변수
 export let totalPrice = 0;
 
 export function addTomato() {
