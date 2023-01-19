@@ -1,11 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as D from './data';
 
 function App() {
   return (
     <>
-      <h1>Hi</h1>
+      {D.randomName()}, {D.randomJobTitle()}, {D.randomDayMonthYear()}
     </>
   );
 }
