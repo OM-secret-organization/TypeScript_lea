@@ -3,7 +3,7 @@ import * as U from './util';
 export const picsumUrl = (width: number, height: number): string =>
   `https://picsum.photos/${width}/${height}`;
 
-export const radomImage = (
+export const randomImage = (
   w: number = 1000,
   h: number = 800,
   delta: number = 200
