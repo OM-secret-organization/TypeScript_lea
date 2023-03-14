@@ -22,8 +22,12 @@ const InputGroup: React.FC<InputGroupProps> = ({
       <input
         type={type}
         style={{ minWidth: 300 }}
-        className="w-full p-3 transition duration-200 border border-gray-400 rounded bg-gray-50"
+        className="w-full p-3 transition duration-200 border border-gray-400 rounded bg-gray-50 focus:bg-white hover"
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
+      <small className="font-medium text-red-500">{error}</small>
     </div>
   );
 };
