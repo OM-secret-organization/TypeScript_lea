@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import InputGroup from '../components/InputGroup';
 import axios from 'axios';
 
-const register = () => {
+const Login = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -69,4 +69,4 @@ const register = () => {
   );
 };
 
-export default register;
+export default Login;
