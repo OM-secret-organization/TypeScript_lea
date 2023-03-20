@@ -12,11 +12,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Suspense fallback={<p>Loading...!</p>}>
-      <RecoilRoot>
-        <App />
-      </RecoilRoot>
-    </Suspense>
+    {/* <Suspense fallback={<p>Loading...!</p>}> */}
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+    {/* </Suspense> */}
   </React.StrictMode>
 );
 

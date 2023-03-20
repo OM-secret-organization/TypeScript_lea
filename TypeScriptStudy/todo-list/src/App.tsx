@@ -1,6 +1,7 @@
 import React from 'react';
 import { atom, selector, useRecoilValue } from 'recoil';
 import axios from 'axios';
+import Calendar from './components/Calendar';
 
 const todoIdState = atom({
   key: 'idState/uuid()',
@@ -21,7 +22,12 @@ const todoItemQuery = selector({
 function App() {
   const data = useRecoilValue(todoItemQuery);
   console.log('data', data);
-  return <div>{data.title}</div>;
+  return (
+    <div>
+      {data.title}
+      <Calendar />
+    </div>
+  );
 }
 
 export default App;
